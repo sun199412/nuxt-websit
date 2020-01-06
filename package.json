@@ -1,0 +1,21 @@
+{
+  "name": "nuxt-websit",
+  "version": "1.0.0",
+  "description": "My superior Nuxt.js project",
+  "author": "dj49846917",
+  "private": true,
+  "scripts": {
+    "dev": "nuxt",
+    "build": "nuxt build",
+    "start": "nuxt start",
+    "generate": "nuxt generate",
+	"deploy": "gh-pages -d dist"
+  },
+  "dependencies": {
+    "nuxt": "^2.0.0",
+    "element-ui": "^2.4.11"
+  },
+  "devDependencies": {
+    "gh-pages": "^2.1.1"
+  }
+}
