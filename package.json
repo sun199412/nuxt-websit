@@ -9,11 +9,14 @@
     "build": "nuxt build",
     "start": "nuxt start",
     "generate": "nuxt generate",
-	"deploy": "push-dir --dir=dist --branch=gh-pages --cleanup"
+    "deploy": "push-dir --dir=dist --branch=gh-pages --cleanup"
   },
   "dependencies": {
+    "element-ui": "^2.4.11",
+    "node-sass": "^4.13.0",
     "nuxt": "^2.0.0",
-    "element-ui": "^2.4.11"
+    "sass-loader": "^8.0.0",
+    "scss-loader": "^0.0.1"
   },
   "devDependencies": {
     "gh-pages": "^2.1.1"
