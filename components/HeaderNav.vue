@@ -4,12 +4,12 @@
       <img :src="logo"/>
       <div class="navBox">
         <ul>
-          <li>首页</li>
-          <li>服务与产品</li>
-          <li>解决方案</li>
-          <li>在线体验</li>
-          <li>开发中心</li>
-          <li>关于我们</li>
+          <li><nuxt-link to="/">首页</nuxt-link></li>
+          <li><nuxt-link to="/a">服务与产品</nuxt-link></li>
+          <li><nuxt-link to="/b">解决方案</nuxt-link></li>
+          <li><nuxt-link to="/c">在线体验</nuxt-link></li>
+          <li><nuxt-link to="/d">开发中心</nuxt-link></li>
+          <li><nuxt-link to="/e">关于我们</nuxt-link></li>
         </ul>
         <div class="btnBox">
           <el-button class="login">登录</el-button>
@@ -32,6 +32,8 @@
 </script>
 
 <style lang="scss" scoped>
+$activeColor: #FC6B00;
+
 .banner {
   width: 100%;
   height: 780px;
@@ -57,6 +59,13 @@
           margin: 0 22px;
           font-size: 22px;
           color: #fff;
+          a {
+            text-decoration: none;
+            color: #fff;
+          }
+          .nuxt-link-exact-active {
+            color: $activeColor;
+          }
         }
       }
       .btnBox {
@@ -67,10 +76,10 @@
           padding-top: 10px;
         }
         .login {
-          color: #FC6B00;
+          color: $activeColor;
         }
         .register {
-          background: #FC6B00;
+          background: $activeColor;
         }
       }
     } 
