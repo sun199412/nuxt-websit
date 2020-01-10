@@ -5,6 +5,7 @@
     <choose-me></choose-me>
     <examples></examples>
     <sponsor></sponsor>
+    <production></production>
   </div>
 </template>
 
@@ -14,6 +15,7 @@ import Solutions from '~/components/home/Solutions'
 import ChooseMe from '~/components/home/ChooseMe'
 import Examples from '~/components/home/Examples'
 import Sponsor from '~/components/home/Sponsor'
+import Production from '~/components/home/Production'
 
 export default {
   layout: 'default',
@@ -22,7 +24,8 @@ export default {
     Solutions,
     ChooseMe,
     Examples,
-    Sponsor
+    Sponsor,
+    Production
   }
 }
 </script>
