@@ -76,6 +76,7 @@ $activeColor: #FC6B00;
 </style>
 
 <style lang="scss" scoped>
+$titleColor: #1C1E2B;
 .solutions {
   width: 100%;
   height: 1000px;
@@ -85,7 +86,7 @@ $activeColor: #FC6B00;
   .title {
     text-align: center;
     font-size: 44px;
-    color: #1C1E2B;
+    color: $titleColor;
     padding-bottom: 17px;
   }
   .description {

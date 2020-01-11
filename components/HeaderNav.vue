@@ -1,10 +1,5 @@
 <template>
   <div>
-    <el-carousel :interval="5000" arrow="hover" height="780px" :autoplay="false">
-      <el-carousel-item v-for="item in picArr" :key="item.id">
-        <img :src="item.pic_url" />
-      </el-carousel-item>
-    </el-carousel>
     <header ref="head">
       <img :src="logo" />
       <div class="navBox">
@@ -12,8 +7,41 @@
           <li>
             <nuxt-link to="/">首页</nuxt-link>
           </li>
-          <li>
-            <nuxt-link to="/a">服务与产品</nuxt-link>
+          <li class="service">
+            <!-- <nuxt-link to="/a">服务与产品</nuxt-link> -->
+            <el-dropdown>
+              <span class="el-dropdown-link" ref="production">服务与产品</span>
+              <el-dropdown-menu slot="dropdown">
+                <div class="screen" @mousemove="changeHover()" @mouseout="hideHover()">
+                  <div class="service_box">
+                    <img :src="light" />
+                    <div>服务</div>
+                    <el-dropdown-item>
+                      <nuxt-link to="/shortmessage">验证码&通知短信</nuxt-link>
+                    </el-dropdown-item>
+                    <el-dropdown-item>
+                      <nuxt-link to="/extension">推广短信</nuxt-link>
+                    </el-dropdown-item>
+                    <el-dropdown-item>
+                      <nuxt-link to="/audiocode">语音验证码</nuxt-link>
+                    </el-dropdown-item>
+                  </div>
+                  <div class="production_box">
+                    <img :src="prod" />
+                    <div>服务</div>
+                    <el-dropdown-item>
+                      <nuxt-link to="/cloudplatform">美唐云平台</nuxt-link>
+                    </el-dropdown-item>
+                    <el-dropdown-item>
+                      <nuxt-link to="/c">SI短信平台</nuxt-link>
+                    </el-dropdown-item>
+                    <el-dropdown-item>
+                      <nuxt-link to="/d">ECP企业通信平台</nuxt-link>
+                    </el-dropdown-item>
+                  </div>
+                </div>
+              </el-dropdown-menu>
+            </el-dropdown>
           </li>
           <li>
             <nuxt-link to="/b">解决方案</nuxt-link>
@@ -41,23 +69,8 @@
 export default {
   data() {
     return {
-      picArr: [
-        {
-          id: 201910111,
-          title: "固定1",
-          pic_url: "/images/pic_home_banner.png"
-        },
-        {
-          id: 201910112,
-          title: "固定2",
-          pic_url: "/images/pic_banner_yzm.png"
-        },
-        {
-          id: 201910113,
-          title: "固定3",
-          pic_url: "/images/pic_yyyz_banner.png"
-        }
-      ],
+      light: "/images/ic_home_fw.png",
+      prod: "/images/ic_home_cp.png",
       logo: "/images/pic_home_logo.png"
     };
   },
@@ -65,6 +78,7 @@ export default {
     window.addEventListener("scroll", this.handleScroll);
   },
   methods: {
+    // 获取高度
     handleScroll() {
       const top =
         window.pageYOffset ||
@@ -77,6 +91,12 @@ export default {
         this.$refs.head.style.background = "";
         this.$refs.head.style.opacity = "1";
       }
+    },
+    changeHover() {
+      this.$refs.production.style.color = '#fc6b00';
+    },
+    hideHover() {
+      this.$refs.production.style.color = '#fff';
     }
   }
 };
@@ -84,6 +104,13 @@ export default {
 
 <style lang="scss" scoped>
 $activeColor: #fc6b00;
+@mixin productCss() {
+  div {
+    font-size: 14px;
+    color: #8b8b8b;
+    margin-top: 4px;
+  }
+}
 
 header {
   width: 100%;
@@ -95,7 +122,7 @@ header {
   box-sizing: border-box;
   position: fixed;
   top: 0;
-  z-index: 2;
+  z-index: 3;
   img {
     width: 162.92px;
     height: 27.19px;
@@ -110,6 +137,14 @@ header {
         margin: 0 22px;
         font-size: 22px;
         color: #fff;
+        &:hover {
+          a {
+            color: $activeColor;
+          }
+          .el-dropdown {
+            color: $activeColor;
+          }
+        }
         a {
           text-decoration: none;
           color: #fff;
@@ -117,7 +152,18 @@ header {
         .nuxt-link-exact-active {
           color: $activeColor;
         }
+        .el-dropdown {
+          color: #fff;
+          font-size: 22px;
+        }
       }
+      // .service {
+      //   a {
+      //     &:hover {
+      //       color: red;
+      //     }
+      //   }
+      // }
     }
     .btnBox {
       margin-left: 21px;
@@ -135,6 +181,39 @@ header {
     }
   }
 }
+.el-dropdown-menu {
+  width: 100%;
+  height: 303px;
+  background: #000;
+  top: 102px !important;
+  left: 0 !important;
+  border: none;
+  box-shadow: inherit;
+  border-radius: 0px;
+  padding: 0;
+}
+.el-popper {
+  margin: 0;
+}
+.screen {
+  display: flex;
+  width: 100%;
+  height: 100%;
+  padding: 50px 0 75px 0;
+  box-sizing: border-box;
+  .service_box {
+    margin-left: 828px;
+    margin-right: 208px;
+    @include productCss();
+  }
+  .production_box {
+    @include productCss();
+  }
+}
+
+.nuxt-link-exact-active {
+  color: $activeColor;
+}
 
 /deep/ .el-icon-arrow-left {
   font-size: 39px;
@@ -143,5 +222,24 @@ header {
 /deep/ .el-icon-arrow-right {
   font-size: 39px;
   color: #a7a7a7;
+}
+
+/deep/ .el-dropdown-menu__item {
+  padding: 0;
+  a {
+    color: #fff;
+    &:hover {
+      color: $activeColor;
+    }
+  }
+}
+
+/deep/ .el-dropdown-menu__item:focus,
+.el-dropdown-menu__item:not(.is-disabled):hover {
+  color: $activeColor;
+  background: #000;
+}
+/deep/ .popper__arrow {
+  display: none;
 }
 </style>

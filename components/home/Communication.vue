@@ -53,6 +53,7 @@
 </script>
 
 <style lang="scss" scoped>
+$titleColor: #1C1E2B;
 .communicationBox {
   width: 100%;
   height: 978px;
@@ -61,7 +62,7 @@
   .title {
     text-align: center;
     font-size: 44px;
-    color: #1C1E2B;
+    color: $titleColor;
     padding-bottom: 10px;
   }
   .description {
@@ -88,7 +89,7 @@
       }
       .listBox_title {
         font-size: 24px;
-        color: #1C1E2B;
+        color: $titleColor;
         margin-bottom: 15px;
       }
       .listBox_description {

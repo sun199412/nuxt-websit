@@ -188,7 +188,7 @@ export default {
 
 <style lang="scss" scoped>
 $activeColor: #fc6b00;
-$textColor: #1c1e2b;
+$titleColor: #1C1E2B;
 $border: 1px solid #ecedf2;
 .production {
   width: 100%;
@@ -198,7 +198,7 @@ $border: 1px solid #ecedf2;
   .title {
     text-align: center;
     font-size: 44px;
-    color: $textColor;
+    color: $titleColor;
     padding-bottom: 10px;
   }
   .description {
@@ -235,7 +235,7 @@ $border: 1px solid #ecedf2;
         .dateBox_right {
           width: 376px;
           .dateBox_right_title {
-            color: $textColor;
+            color: $titleColor;
             font-size: 20px;
             border-bottom: $border;
             padding: 20px 0;

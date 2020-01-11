@@ -53,6 +53,7 @@
 </script>
 
 <style lang="scss" scoped>
+$titleColor: #1C1E2B;
 .choose {
   width: 100%;
   height: 927px;
@@ -61,7 +62,7 @@
   .title {
     text-align: center;
     font-size: 44px;
-    color: #1C1E2B;
+    color: $titleColor;
     padding-bottom: 10px;
   }
   .description {
@@ -77,8 +78,12 @@
       width: 280px;
       text-align: center;
       margin: 60px 100px;
+      &:hover img {
+        position: relative;
+        top: -20px;
+      }
       .listBox_title {
-        color: #1C1E2B;
+        color: $titleColor;
         font-size: 24px;
         margin-top: 15px;
       }
