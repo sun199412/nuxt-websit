@@ -33,10 +33,10 @@
                       <nuxt-link to="/cloudplatform">美唐云平台</nuxt-link>
                     </el-dropdown-item>
                     <el-dropdown-item>
-                      <nuxt-link to="/c">SI短信平台</nuxt-link>
+                      <nuxt-link to="/gateway">SI短信平台</nuxt-link>
                     </el-dropdown-item>
                     <el-dropdown-item>
-                      <nuxt-link to="/d">ECP企业通信平台</nuxt-link>
+                      <nuxt-link to="/enterprise">ECP企业通信平台</nuxt-link>
                     </el-dropdown-item>
                   </div>
                 </div>
@@ -44,7 +44,7 @@
             </el-dropdown>
           </li>
           <li>
-            <nuxt-link to="/b">解决方案</nuxt-link>
+            <nuxt-link to="/solutioncase">解决方案</nuxt-link>
           </li>
           <li>
             <nuxt-link to="/c">在线体验</nuxt-link>

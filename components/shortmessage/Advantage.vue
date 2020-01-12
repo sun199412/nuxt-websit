@@ -36,9 +36,8 @@ $titleColor: #1C1E2B;
   .desc {
     color: #666;
     font-size: 28px;
-    margin-top: 11px;
     width: 1076px;
-    margin: 0 auto;
+    margin: 11px auto 0 auto;
   }
   .picBox {
     display: flex;
