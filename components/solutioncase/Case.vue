@@ -11,7 +11,7 @@
       ></tab>
       <ul
         class="tabPane"
-        v-show="record.showFlag ? record.showFlag === '1' : tabList[0].showFlag ==='1'"
+        v-show="record.val ? record.val === '教育' : tabList[0].val ==='教育'"
       >
         <li v-for="item in tabPaneList" :key="item.id" class="tabPane_list">
           <img class="logo" :src="item.logo_url" />
@@ -27,6 +27,13 @@
           </div>
         </li>
       </ul>
+      <div v-show="record.val==='电商'">电商</div>
+      <div v-show="record.val==='金融保险'">金融保险</div>
+      <div v-show="record.val==='生活服务'">生活服务</div>
+      <div v-show="record.val==='政企服务'">政企服务</div>
+      <div v-show="record.val==='交通'">交通</div>
+      <div v-show="record.val==='医疗'">医疗</div>
+      <div v-show="record.val==='社交'">社交</div>
     </div>
   </div>
 </template>
@@ -111,6 +118,7 @@ export default {
   },
   methods: {
     renderTab(item) {
+      this.record = item;
       this.tabList.forEach((it, index) => {
         if (it.id === item.id) {
           this.$set(this.tabList[index], "showFlag", "1");

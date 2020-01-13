@@ -47,13 +47,13 @@
             <nuxt-link to="/solutioncase">解决方案</nuxt-link>
           </li>
           <li>
-            <nuxt-link to="/c">在线体验</nuxt-link>
+            <nuxt-link to="/onlineexperience">在线体验</nuxt-link>
           </li>
           <li>
-            <nuxt-link to="/d">开发中心</nuxt-link>
+            <nuxt-link to="/developmentcenter">开发中心</nuxt-link>
           </li>
           <li>
-            <nuxt-link to="/e">关于我们</nuxt-link>
+            <nuxt-link to="/aboutme">关于我们</nuxt-link>
           </li>
         </ul>
         <div class="btnBox">
