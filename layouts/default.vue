@@ -2,14 +2,17 @@
   <div>
     <header-nav></header-nav>
     <nuxt />
+    <footer-component></footer-component>
   </div>
 </template>
 
 <script>
 import HeaderNav from '~/components/HeaderNav'
+import FooterComponent from '~/components/FooterComponent'
 export default {
   components: {
-    HeaderNav
+    HeaderNav,
+    FooterComponent
   }
 }
 </script>

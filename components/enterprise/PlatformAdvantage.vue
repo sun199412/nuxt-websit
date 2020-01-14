@@ -1,35 +1,35 @@
 <template>
-  <div class="communicationBox">
-    <div class="title">为您提供通讯的一切</div>
-    <div class="description">To provide you with all the communication</div>
+  <div class="Box">
+    <div class="title">平台优势</div>
+    <div class="description">多渠道通信服务平台</div>
     <ul class="listBox">
       <li>
-        <img :src="message" />
+        <img :src="jc" />
         <div class="listBox_title">短信</div>
         <div class="listBox_description">直连通道，三网合一，5秒必达。主备通道.大容量高并发.自助平台</div>
       </li>
       <li>
-        <img :src="audio" />
+        <img :src="hlh" />
         <div class="listBox_title">语音</div>
         <div class="listBox_description">直连通道，三网合一，5秒必达。主备通道.大容量高并发.自助平台</div>
       </li>
       <li>
-        <img :src="msgPlatform" />
+        <img :src="func" />
         <div class="listBox_title">企业级短信平台</div>
         <div class="listBox_description">美唐自助研发核心产品，saas架构，迭代进化，满足多应用场景</div>
       </li>
       <li>
-        <img :src="phonePlatform" />
+        <img :src="safe" />
         <div class="listBox_title">企业级呼叫平台</div>
         <div class="listBox_description">美唐自助研发核心产品，saas架构，迭代进化，满足多应用场</div>
       </li>
       <li>
-        <img :src="wechatPlatform" />
+        <img :src="service" />
         <div class="listBox_title">微信管理平台</div>
         <div class="listBox_description">直连通道，三网合一，5秒必达。主备通道.大容量高并发.自助平台</div>
       </li>
       <li>
-        <img :src="morePlatform" />
+        <img :src="up" />
         <div class="listBox_title">多渠道信息平台</div>
         <div class="listBox_description">整合客户已有的”沟通”服务平台，合理方案规划与建设</div>
       </li>
@@ -41,12 +41,12 @@
   export default {
     data() {
       return {
-        message: "/images/ic_cp_dx.png", // 短信
-        audio: "/images/ic_cp_yy.png", // 语音
-        msgPlatform: '/images/ic_cp_dxpt.png', // 企业级短信平台
-        phonePlatform: '/images/ic_cp_hjpt.png', // 企业级呼叫平台
-        wechatPlatform: '/images/ic_cp_glpt.png', // 微信管理平台
-        morePlatform: '/images/ic_cp_xxpt.png', // 多渠道信息平台
+        jc: "/images/ic_ecp_jc.png",
+        hlh: "/images/ic_ecp_hlh.png",
+        func: '/images/ic_si_gnff.png',
+        safe: '/images/ic_yzm_safe.png',
+        service: '/images/ic_si_dzfw.png',
+        up: '/images/ic_si_sjfw.png',
       }
     },
   }
@@ -54,7 +54,7 @@
 
 <style lang="scss" scoped>
 $titleColor: #1C1E2B;
-.communicationBox {
+.Box {
   width: 100%;
   height: 978px;
   padding: 98px 336px 82px 336px;
@@ -66,7 +66,7 @@ $titleColor: #1C1E2B;
     padding-bottom: 10px;
   }
   .description {
-    font-size: 20px;
+    font-size: 28px;
     color: #666;
     text-align: center;
   }
@@ -74,15 +74,11 @@ $titleColor: #1C1E2B;
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
+    margin-top: 23px;
     li {
       width: 400px;
       height: 367px;
-      // border: 1px solid #E8E5E5;
       text-align: center;
-      &:hover {
-        box-shadow: 0 2px 2px 2px #ccc;
-        transform: scale(1.05)
-      }
       img {
         margin-top: 53px;
         margin-bottom: 29px;
