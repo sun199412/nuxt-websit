@@ -57,8 +57,8 @@
           </li>
         </ul>
         <div class="btnBox">
-          <el-button class="login">登录</el-button>
-          <el-button type="warning" class="register">注册有礼</el-button>
+          <el-button class="login" @click="login">登录</el-button>
+          <el-button type="warning" class="register" @click="register">注册有礼</el-button>
         </div>
       </div>
     </header>
@@ -97,6 +97,14 @@ export default {
     },
     hideHover() {
       this.$refs.production.style.color = '#fff';
+    },
+    // 点击跳转登录
+    login() {
+      this.$router.push('/login')
+    },
+    // 跳转到注册
+    register() {
+      this.$router.push('/register')
     }
   }
 };

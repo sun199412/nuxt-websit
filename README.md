@@ -110,3 +110,52 @@ For detailed explanation on how things work, check out [Nuxt.js docs](https://nu
         }
     }
 ```
+
+## 4. nuxt中使用百度地图
+1. 在nuxt.config.js中，配置
+```
+    head: {
+        title: process.env.npm_package_name || '',
+        meta: [
+            { charset: 'utf-8' },
+            { name: 'viewport', content: 'width=device-width, initial-scale=1' },
+            { hid: 'description', name: 'description', content: process.env.npm_package_description || '' }
+        ],
+        link: [
+            { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }
+        ],
+        script: [ // 这里添加百度地图的js文件
+            { src: "http://api.map.baidu.com/api?v=2.0&ak=9UxhL8yiE89j3ryPL2G25msjPFzTnDGd" }
+        ]
+    },
+```
+
+2. 在文件中使用
+```
+    <div class="address" id="allmap"></div>
+
+    mounted() {
+        this.init();
+    },
+
+    methods: {
+        init() {
+            var map = new BMap.Map("allmap");
+            var point = new BMap.Point(106.504330,29.619820);
+            var marker = new BMap.Marker(point); // 创建标注
+            map.addOverlay(marker); // 将标注添加到地图中
+            map.centerAndZoom(point, 19);
+            var opts = {
+                width: 307, // 信息窗口宽度
+                height: 100, // 信息窗口高度
+                title: "重庆市美唐科技有限公司" // 信息窗口标题
+            };
+            var infoWindow = new BMap.InfoWindow(
+                "重庆市渝北区光电园麒麟D座12-1",
+                opts
+            ); // 创建信息窗口对象
+            map.openInfoWindow(infoWindow, point); //开启信息窗口
+            map.enableScrollWheelZoom(true);
+        },
+    }
+```
