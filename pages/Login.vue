@@ -34,7 +34,7 @@
                 <el-checkbox label="记住用户名" name="type" v-model="ruleForm.rememberNm"></el-checkbox>
               </el-checkbox-group>
             </el-form-item>
-            <el-button type="text" class="forgetPs">忘记密码</el-button>
+            <el-button type="text" class="forgetPs" @click="toReset">忘记密码</el-button>
           </div>
           <el-form-item>
             <el-button type="warning" @click="submitForm('ruleForm')">立即发送</el-button>
@@ -69,15 +69,20 @@ export default {
     };
   },
   methods: {
+    // 提交
     submitForm(formName) {
       this.$refs[formName].validate(valid => {
         if (valid) {
-          alert("submit!");
+          this.$router.push('/')
         } else {
           console.log("error submit!!");
           return false;
         }
       });
+    },
+    // 忘记密码
+    toReset() {
+      this.$router.push('/resetpas')
     }
   }
 };
@@ -172,5 +177,16 @@ $activeColor: #fc6b00;
   right: 0;
   color: #666;
   font-size: 14px;
+}
+/deep/ .el-checkbox__input.is-checked + .el-checkbox__label {
+  color: $activeColor;
+}
+/deep/ .el-checkbox__input.is-checked .el-checkbox__inner,
+.el-checkbox__input.is-indeterminate .el-checkbox__inner {
+  background-color: $activeColor;
+  border-color: $activeColor;
+}
+/deep/ .el-checkbox__inner:hover {
+  border-color: $activeColor;
 }
 </style>

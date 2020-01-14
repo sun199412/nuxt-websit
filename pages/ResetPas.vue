@@ -4,7 +4,7 @@
     <div class="registerBox">
       <img :src="bg_url" />
       <div class="box">
-        <div class="title">注册</div>
+        <div class="title">重置密码</div>
         <el-form
           :model="ruleForm"
           status-icon
@@ -22,7 +22,7 @@
           <el-form-item prop="password">
             <el-input
               type="password"
-              placeholder="请输入密码"
+              placeholder="请设置登录密码"
               v-model="ruleForm.password"
               autocomplete="off"
             ></el-input>
@@ -31,22 +31,15 @@
             <el-input placeholder="请输入验证码" v-model="ruleForm.code"></el-input>
             <div class="code">MCFK</div>
           </el-form-item>
-          <div class="otherHandle">
-            <el-form-item prop="read">
-              <el-checkbox-group v-model="ruleForm.read">
-                <el-checkbox label="我已阅读美唐云平台用户协议" name="type" v-model="ruleForm.read"></el-checkbox>
-              </el-checkbox-group>
-            </el-form-item>
-          </div>
           <div class="btn">
             <el-form-item>
-              <el-button type="warning" @click="submitForm('ruleForm')">注册</el-button>
+              <el-button type="warning" @click="submitForm('ruleForm')">重置密码</el-button>
             </el-form-item>
           </div>
         </el-form>
         <div class="bottomBox">
-          <span>已有账号，</span>
-          <el-button type="text" @click="login">去登录</el-button>
+          <el-button type="text" @click="login">登录</el-button>
+          <el-button type="text" @click="register">注册</el-button>
         </div>
       </div>
     </div>
@@ -93,6 +86,10 @@ export default {
     // 跳转到登录页
     login() {
       this.$router.push('/login')
+    },
+    // 跳转到注册页面
+    register() {
+      this.$router.push('register')
     }
   }
 };
@@ -187,31 +184,6 @@ $activeColor: #fc6b00;
 }
 /deep/ .el-button--warning {
   background-color: $activeColor;
-  border-color: $activeColor;
-}
-.otherHandle {
-  position: relative;
-}
-/deep/ .el-checkbox {
-  position: absolute;
-  top: -18px;
-}
-/deep/ .forgetPs {
-  position: absolute;
-  top: -18px;
-  right: 0;
-  color: #666;
-  font-size: 14px;
-}
-/deep/ .el-checkbox__input.is-checked + .el-checkbox__label {
-  color: $activeColor;
-}
-/deep/ .el-checkbox__input.is-checked .el-checkbox__inner,
-.el-checkbox__input.is-indeterminate .el-checkbox__inner {
-  background-color: $activeColor;
-  border-color: $activeColor;
-}
-/deep/ .el-checkbox__inner:hover {
   border-color: $activeColor;
 }
 </style>
