@@ -19,7 +19,7 @@ export default {
   },
   data() {
     return {
-      banner_url: "/images/pic_gywm_banner.png",
+      banner_url: "images/pic_gywm_banner.png",
     }
   },
 }

@@ -13,7 +13,7 @@ import Document from '~/components/developmentcenter/Document'
     },
     data() {
       return {
-        banner_url: "/images/pic_kfzx_banner.png",
+        banner_url: "images/pic_kfzx_banner.png",
       }
     },
   }

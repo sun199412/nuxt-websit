@@ -44,9 +44,9 @@
 export default {
   data() {
     return {
-      exampleImg1: "/images/pic_al_bg.png",
-      exampleItemImg: "/images/ic_al_logo.png",
-      exampleImg1Logo: "/images/ic_al_yh.png"
+      exampleImg1: "images/pic_al_bg.png",
+      exampleItemImg: "images/ic_al_logo.png",
+      exampleImg1Logo: "images/ic_al_yh.png"
     };
   }
 };

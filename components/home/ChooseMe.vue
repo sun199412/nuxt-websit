@@ -41,12 +41,12 @@
   export default {
     data() {
       return {
-        speed: "/images/ic_ys_sd.png", // 更牛的速度
-        resourse: "/images/ic_ys_zy.png", // 资质与资源
-        safe: '/images/ic_ys_fh.png', // 安全防护
-        platform: '/images/ic_ys_zz.png', // 自助平台
-        service: '/images/ic_ys_fw.png', // 专业服务
-        morePlatform: '/images/ic_ys_cq.png', // 自主知识产权
+        speed: "images/ic_ys_sd.png", // 更牛的速度
+        resourse: "images/ic_ys_zy.png", // 资质与资源
+        safe: 'images/ic_ys_fh.png', // 安全防护
+        platform: 'images/ic_ys_zz.png', // 自助平台
+        service: 'images/ic_ys_fw.png', // 专业服务
+        morePlatform: 'images/ic_ys_cq.png', // 自主知识产权
       }
     },
   }

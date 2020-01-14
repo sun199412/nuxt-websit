@@ -46,7 +46,7 @@ export default {
   },
   data() {
     return {
-      next_url: "/images/ic_jjfa_sj.png",
+      next_url: "images/ic_jjfa_sj.png",
       active: {
         color: "#fc6b00"
       },
@@ -66,50 +66,50 @@ export default {
       tabPaneList: [
         {
           id: "00",
-          logo_url: "/images/pic_jjfa_logo1.png",
+          logo_url: "images/pic_jjfa_logo1.png",
           title: "大融汇",
           detail:
             "中国移动通信集团有限公司（英文名称：China Mobile Communications Group Co.,Ltd，简称“中国移动”、“CMCC”或“中国移动通信”、“中移动”）是按照国家电信体制改革的总体部署，于2000年4月20日成立的中央企业。",
           iconList: [
-            { id: "10", icon: "/images/ic_cp_dx.png", val: "验证码&通知短信" },
-            { id: "11", icon: "/images/ic_yyyz_gbf.png", val: "推广短信" },
-            { id: "12", icon: "/images/ic_cp_yy.png", val: "语音验证码" }
+            { id: "10", icon: "images/ic_cp_dx.png", val: "验证码&通知短信" },
+            { id: "11", icon: "images/ic_yyyz_gbf.png", val: "推广短信" },
+            { id: "12", icon: "images/ic_cp_yy.png", val: "语音验证码" }
           ]
         },
         {
           id: "01",
-          logo_url: "/images/pic_jjfa_logo2.png",
+          logo_url: "images/pic_jjfa_logo2.png",
           title: "永辉超市",
           detail:
             "中国移动通信集团有限公司（英文名称：China Mobile Communications Group Co.,Ltd，简称“中国移动”、“CMCC”或“中国移动通信”、“中移动”）是按照国家电信体制改革的总体部署，于2000年4月20日成立的中央企业。",
           iconList: [
-            { id: "13", icon: "/images/ic_mty_ypt.png", val: "美唐云 " },
-            { id: "14", icon: "/images/ic_cp_xxpt.png", val: "SI短信网关平台" },
-            { id: "15", icon: "/images/ic_cp_dxpt.png", val: "企业通信平台" }
+            { id: "13", icon: "images/ic_mty_ypt.png", val: "美唐云 " },
+            { id: "14", icon: "images/ic_cp_xxpt.png", val: "SI短信网关平台" },
+            { id: "15", icon: "images/ic_cp_dxpt.png", val: "企业通信平台" }
           ]
         },
         {
           id: "02",
-          logo_url: "/images/pic_jjfa_logo3.png",
+          logo_url: "images/pic_jjfa_logo3.png",
           title: "果琳",
           detail:
             "中国移动通信集团有限公司（英文名称：China Mobile Communications Group Co.,Ltd，简称“中国移动”、“CMCC”或“中国移动通信”、“中移动”）是按照国家电信体制改革的总体部署，于2000年4月20日成立的中央企业。",
           iconList: [
-            { id: "16", icon: "/images/ic_cp_dx.png", val: "验证码&通知短信" },
-            { id: "17", icon: "/images/ic_yyyz_gbf.png", val: "推广短信" },
-            { id: "18", icon: "/images/ic_cp_yy.png", val: "语音验证码" }
+            { id: "16", icon: "images/ic_cp_dx.png", val: "验证码&通知短信" },
+            { id: "17", icon: "images/ic_yyyz_gbf.png", val: "推广短信" },
+            { id: "18", icon: "images/ic_cp_yy.png", val: "语音验证码" }
           ]
         },
         {
           id: "03",
-          logo_url: "/images/pic_jjfa_logo4.png",
+          logo_url: "images/pic_jjfa_logo4.png",
           title: "协信天骄物业",
           detail:
             "中国移动通信集团有限公司（英文名称：China Mobile Communications Group Co.,Ltd，简称“中国移动”、“CMCC”或“中国移动通信”、“中移动”）是按照国家电信体制改革的总体部署，于2000年4月20日成立的中央企业。",
           iconList: [
-            { id: "19", icon: "/images/ic_cp_dx.png", val: "验证码&通知短信" },
-            { id: "20", icon: "/images/ic_yyyz_gbf.png", val: "推广短信" },
-            { id: "21", icon: "/images/ic_cp_yy.png", val: "语音验证码" }
+            { id: "19", icon: "images/ic_cp_dx.png", val: "验证码&通知短信" },
+            { id: "20", icon: "images/ic_yyyz_gbf.png", val: "推广短信" },
+            { id: "21", icon: "images/ic_cp_yy.png", val: "语音验证码" }
           ]
         }
       ],

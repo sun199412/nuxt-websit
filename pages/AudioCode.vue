@@ -22,7 +22,7 @@ export default {
   },
   data() {
     return {
-      banner_url: "/images/pic_yyyz_banner.png",
+      banner_url: "images/pic_yyyz_banner.png",
       // 应用优势板块的数据
       dataSource: {
         title: "应用优势",
@@ -31,25 +31,25 @@ export default {
           {
             id: "00001008",
             title: "稳定急速",
-            pic_url: "/images/ic_yzm_jsdd.png",
+            pic_url: "images/ic_yzm_jsdd.png",
             detail: "优质通话码号，渠道稳定独享，分布式服务器架构，毫秒响应"
           },
           {
             id: "00001009",
             title: "防刷单",
-            pic_url: "/images/ic_yyyz_fsd.png",
+            pic_url: "images/ic_yyyz_fsd.png",
             detail: "支持多种混音以及异常行为限制，杜绝恶意刷单"
           },
           {
             id: "00001010",
             title: "高并发",
-            pic_url: "/images/ic_yyyz_gbf.png",
+            pic_url: "images/ic_yyyz_gbf.png",
             detail: "支持高达每秒8000TPS，避免高峰排队、延迟等常见问题"
           },
           {
             id: "00001011",
             title: "100%验证",
-            pic_url: "/images/ic_yzm_safe.png",
+            pic_url: "images/ic_yzm_safe.png",
             detail: "高接通率，配套短信验证码，100%验证保证"
           }
         ]

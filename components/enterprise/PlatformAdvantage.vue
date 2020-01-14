@@ -41,12 +41,12 @@
   export default {
     data() {
       return {
-        jc: "/images/ic_ecp_jc.png",
-        hlh: "/images/ic_ecp_hlh.png",
-        func: '/images/ic_si_gnff.png',
-        safe: '/images/ic_yzm_safe.png',
-        service: '/images/ic_si_dzfw.png',
-        up: '/images/ic_si_sjfw.png',
+        jc: "images/ic_ecp_jc.png",
+        hlh: "images/ic_ecp_hlh.png",
+        func: 'images/ic_si_gnff.png',
+        safe: 'images/ic_yzm_safe.png',
+        service: 'images/ic_si_dzfw.png',
+        up: 'images/ic_si_sjfw.png',
       }
     },
   }

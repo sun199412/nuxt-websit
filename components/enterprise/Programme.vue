@@ -29,7 +29,7 @@
 export default {
   data() {
     return {
-      frame_url: "/images/pic_ecp_fnjg.png"
+      frame_url: "images/pic_ecp_fnjg.png"
     };
   }
 };

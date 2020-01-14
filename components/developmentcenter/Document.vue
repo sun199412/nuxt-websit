@@ -30,7 +30,7 @@ export default {
   },
   data() {
     return {
-      next_url: "/images/ic_jjfa_sj.png",
+      next_url: "images/ic_jjfa_sj.png",
       active: {
         color: "#fc6b00"
       },

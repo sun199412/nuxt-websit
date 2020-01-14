@@ -22,7 +22,7 @@ export default {
   },
   data() {
     return {
-      bannerUrl: "/images/pic_banner_yzm.png",
+      bannerUrl: "images/pic_banner_yzm.png",
       // 应用优势板块的数据
       dataSource: { 
         title: "应用优势",
@@ -31,25 +31,25 @@ export default {
           {
             id: "00001000",
             title: "急速到达",
-            pic_url: "/images/ic_yzm_jsdd.png",
+            pic_url: "images/ic_yzm_jsdd.png",
             detail: "优质106哦通知，全网三网5秒到达"
           },
           {
             id: "00001001",
             title: "15分钟接入",
-            pic_url: "/images/ic_yzm_15min.png",
+            pic_url: "images/ic_yzm_15min.png",
             detail: "SDK接口完美适配任何APP平台，15分钟快速接入"
           },
           {
             id: "00001002",
             title: "安全稳定",
-            pic_url: "/images/ic_yzm_safe.png",
+            pic_url: "images/ic_yzm_safe.png",
             detail: "分布式服务器，企业级BOSS网关，主备通道自动切换"
           },
           {
             id: "00001003",
             title: "高性价比",
-            pic_url: "/images/ic_yzm_gxjb.png",
+            pic_url: "images/ic_yzm_gxjb.png",
             detail: "阶梯计价、灵活付费、性价比优选"
           }
         ]
@@ -58,7 +58,7 @@ export default {
       applicationPlace: {
         title: '应用场景',
         desc: '运营商直连&工信部资质',
-        backPicUrl: '/images/pic_yzm_yycj.png',
+        backPicUrl: 'images/pic_yzm_yycj.png',
         appLeftList: [
           {
             id: '00100000',

@@ -69,9 +69,9 @@
 export default {
   data() {
     return {
-      light: "/images/ic_home_fw.png",
-      prod: "/images/ic_home_cp.png",
-      logo: "/images/pic_home_logo.png"
+      light: "images/ic_home_fw.png",
+      prod: "images/ic_home_cp.png",
+      logo: "images/pic_home_logo.png"
     };
   },
   mounted() {

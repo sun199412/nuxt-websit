@@ -22,7 +22,7 @@ export default {
   },
   data() {
     return {
-      banner_url: "/images/pic_tgdx_banner.png",
+      banner_url: "images/pic_tgdx_banner.png",
       // 应用优势板块的数据
       dataSource: {
         title: "应用优势",
@@ -31,25 +31,25 @@ export default {
           {
             id: "00001004",
             title: "高性能",
-            pic_url: "/images/ic_tgdx_gxn.png",
+            pic_url: "images/ic_tgdx_gxn.png",
             detail: "多主机，大并发量机制，支持千万条日发送"
           },
           {
             id: "00001005",
             title: "广覆盖",
-            pic_url: "/images/ic_tgdx_gfg.png",
+            pic_url: "images/ic_tgdx_gfg.png",
             detail: "覆盖全国移动、联通、电信及虚拟运营商，支持最新号段"
           },
           {
             id: "00001006",
             title: "强安全",
-            pic_url: "/images/ic_yzm_safe.png",
+            pic_url: "images/ic_yzm_safe.png",
             detail: "通讯级防护机制保障，以信息安全为企业第一生命线"
           },
           {
             id: "00001007",
             title: "多样式",
-            pic_url: "/images/ic_tgdx_dys.png",
+            pic_url: "images/ic_tgdx_dys.png",
             detail:
               "支持多样式，可根据接口定制个性化发送，也可通过美唐云网页发送"
           }
@@ -59,7 +59,7 @@ export default {
       applicationPlace: {
         title: "应用场景",
         desc: "您所需的，正是我们现在在做的",
-        backPicUrl: "/images/pic_yzm_yycj.png",
+        backPicUrl: "images/pic_yzm_yycj.png",
         appLeftList: [
           {
             id: "00100004",

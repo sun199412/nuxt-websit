@@ -41,12 +41,12 @@
   export default {
     data() {
       return {
-        message: "/images/ic_cp_dx.png", // 短信
-        audio: "/images/ic_cp_yy.png", // 语音
-        msgPlatform: '/images/ic_cp_dxpt.png', // 企业级短信平台
-        phonePlatform: '/images/ic_cp_hjpt.png', // 企业级呼叫平台
-        wechatPlatform: '/images/ic_cp_glpt.png', // 微信管理平台
-        morePlatform: '/images/ic_cp_xxpt.png', // 多渠道信息平台
+        message: "images/ic_cp_dx.png", // 短信
+        audio: "images/ic_cp_yy.png", // 语音
+        msgPlatform: 'images/ic_cp_dxpt.png', // 企业级短信平台
+        phonePlatform: 'images/ic_cp_hjpt.png', // 企业级呼叫平台
+        wechatPlatform: 'images/ic_cp_glpt.png', // 微信管理平台
+        morePlatform: 'images/ic_cp_xxpt.png', // 多渠道信息平台
       }
     },
   }

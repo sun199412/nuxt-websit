@@ -29,7 +29,7 @@ For detailed explanation on how things work, check out [Nuxt.js docs](https://nu
     export default {
         data() {
         return {
-            homeImg: '/images/pic_home_banner.png', // 首页图
+            homeImg: 'images/pic_home_banner.png', // 首页图
         }
         },
     }
@@ -83,16 +83,16 @@ For detailed explanation on how things work, check out [Nuxt.js docs](https://nu
                 }
             },
             picArr: [
-                { id: "00000000", picUrl: "/images/pic_ke_dx_nor.png" },
-                { id: "00000001", picUrl: "/images/pic_ke_jtdx_nor.png" },
-                { id: "00000002", picUrl: "/images/pic_ke_lt_nor.png" },
-                { id: "00000003", picUrl: "/images/pic_ke_tk_nor.png" },
-                { id: "00000004", picUrl: "/images/pic_ke_xhw_nor.png" },
-                { id: "00000005", picUrl: "/images/pic_ke_xndx_nor.png" },
-                { id: "00000006", picUrl: "/images/pic_ke_xx_nor.png" },
-                { id: "00000007", picUrl: "/images/pic_ke_yd_pre.png" },
-                { id: "00000008", picUrl: "/images/pic_ke_yhcs_nor.png" },
-                { id: "00000009", picUrl: "/images/pic_ke_zsj_nor.png" }
+                { id: "00000000", picUrl: "images/pic_ke_dx_nor.png" },
+                { id: "00000001", picUrl: "images/pic_ke_jtdx_nor.png" },
+                { id: "00000002", picUrl: "images/pic_ke_lt_nor.png" },
+                { id: "00000003", picUrl: "images/pic_ke_tk_nor.png" },
+                { id: "00000004", picUrl: "images/pic_ke_xhw_nor.png" },
+                { id: "00000005", picUrl: "images/pic_ke_xndx_nor.png" },
+                { id: "00000006", picUrl: "images/pic_ke_xx_nor.png" },
+                { id: "00000007", picUrl: "images/pic_ke_yd_pre.png" },
+                { id: "00000008", picUrl: "images/pic_ke_yhcs_nor.png" },
+                { id: "00000009", picUrl: "images/pic_ke_zsj_nor.png" }
             ]
         };
     }

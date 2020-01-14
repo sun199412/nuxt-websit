@@ -16,7 +16,7 @@ export default {
   },
   data() {
     return {
-      banner_url: "/images/pic_si_banner.png",
+      banner_url: "images/pic_si_banner.png",
       // 应用优势板块的数据
       dataSource: { 
         title: "平台优势",
@@ -25,25 +25,25 @@ export default {
           {
             id: "00001020",
             title: "功能丰富",
-            pic_url: "/images/ic_si_gnff.png",
+            pic_url: "images/ic_si_gnff.png",
             detail: "主流配置，前瞻性功能，紧跟移动互联网化发展发展，架构强大，性能优秀"
           },
           {
             id: "00001021",
             title: "高安全性",
-            pic_url: "/images/ic_yzm_safe.png",
+            pic_url: "images/ic_yzm_safe.png",
             detail: "私有化部署，客户信息安全保障，通信协议加密，保障数据传输安全"
           },
           {
             id: "00001022",
             title: "定制服务",
-            pic_url: "/images/ic_si_dzfw.png",
+            pic_url: "images/ic_si_dzfw.png",
             detail: "企事业定制化移动信息平台，完美匹配企业个性化需求"
           },
           {
             id: "00001023",
             title: "升级服务",
-            pic_url: "/images/ic_si_sjfw.png",
+            pic_url: "images/ic_si_sjfw.png",
             detail: "售后无忧，每年1-3次/升级服务"
           }
         ]

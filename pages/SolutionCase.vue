@@ -13,7 +13,7 @@ export default {
   },
   data() {
     return {
-      bannerUrl: "/images/pic_jjfa_banner.png",
+      bannerUrl: "images/pic_jjfa_banner.png",
     };
   },
 };

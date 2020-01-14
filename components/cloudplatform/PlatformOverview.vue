@@ -49,7 +49,7 @@
 export default {
   data() {
     return {
-      platform_url: "/images/pic_mtypt_ptgs.png"
+      platform_url: "images/pic_mtypt_ptgs.png"
     };
   }
 };

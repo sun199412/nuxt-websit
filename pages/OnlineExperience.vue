@@ -13,7 +13,7 @@ import Experience from "~/components/onlineexperience/Experience";
     },
     data() {
       return {
-        banner_url: '/images/pic_zxty_banner.png'
+        banner_url: 'images/pic_zxty_banner.png'
       }
     },
   }

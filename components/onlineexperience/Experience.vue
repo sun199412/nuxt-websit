@@ -104,7 +104,7 @@ export default {
         ],
         code: [{ required: true, message: "请输入验证码", trigger: "blur" }]
       },
-      icon_url: "/images/ic_zxty_dz.png"
+      icon_url: "images/ic_zxty_dz.png"
     };
   },
   methods: {

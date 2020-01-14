@@ -11,7 +11,7 @@
   export default {
     data() {
       return {
-        app_url: '/images/pic_yyyz_jycj.png'
+        app_url: 'images/pic_yyyz_jycj.png'
       }
     },
   }

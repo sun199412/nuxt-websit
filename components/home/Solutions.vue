@@ -47,7 +47,7 @@
     data() {
       return {
         activeName: '1',
-        solutionsImg: '/images/pic_jjfa.png'
+        solutionsImg: 'images/pic_jjfa.png'
       }
     },
     methods: {
