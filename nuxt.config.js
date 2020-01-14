@@ -1,7 +1,7 @@
 
 export default {
   router: {
-    base: '/'
+    base: '/web/'
   },
   mode: 'universal',
   /*
