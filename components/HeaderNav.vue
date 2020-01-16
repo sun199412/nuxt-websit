@@ -10,7 +10,11 @@
           <li class="service">
             <!-- <nuxt-link to="/a">服务与产品</nuxt-link> -->
             <el-dropdown>
-              <span class="el-dropdown-link" ref="production">服务与产品</span>
+              <span
+                class="el-dropdown-link"
+                ref="production"
+                :class="{'nuxt-link-active': true, 'nuxt-link-exact-active': activeFlag}"
+              >服务与产品</span>
               <el-dropdown-menu slot="dropdown">
                 <div class="screen" @mousemove="changeHover()" @mouseout="hideHover()">
                   <div class="service_box">
@@ -71,8 +75,29 @@ export default {
     return {
       light: "images/ic_home_fw.png",
       prod: "images/ic_home_cp.png",
-      logo: "images/pic_home_logo.png"
+      logo: "images/pic_home_logo.png",
+      activeFlag: false
     };
+  },
+  watch: {
+    $route: {
+      handler: function(val, oldVal) {
+        try {
+          if (
+            val.path === "/shortmessage" ||
+            val.path === "/extension" ||
+            val.path === "/audiocode" ||
+            val.path === "/cloudplatform" ||
+            val.path === "/gateway" ||
+            val.path === "/enterprise"
+          ) {
+            this.$refs.production.style.color = "#fc6b00";
+          } else {
+            this.$refs.production.style.color = "#fff";
+          }
+        } catch (error) {}
+      }
+    }
   },
   mounted() {
     window.addEventListener("scroll", this.handleScroll);
@@ -84,27 +109,29 @@ export default {
         window.pageYOffset ||
         document.documentElement.scrollTop ||
         document.body.scrollTop;
-      if (top > 102) {
-        this.$refs.head.style.background = "#232323";
-        this.$refs.head.style.opacity = "0.8";
-      } else {
-        this.$refs.head.style.background = "";
-        this.$refs.head.style.opacity = "1";
-      }
+      try {
+        if (top > 102) {
+          this.$refs.head.style.background = "#232323";
+          this.$refs.head.style.opacity = "0.8";
+        } else {
+          this.$refs.head.style.background = "";
+          this.$refs.head.style.opacity = "1";
+        }
+      } catch (error) {}
     },
     changeHover() {
-      this.$refs.production.style.color = '#fc6b00';
+      this.activeFlag = true;
     },
     hideHover() {
-      this.$refs.production.style.color = '#fff';
+      this.activeFlag = false;
     },
     // 点击跳转登录
     login() {
-      this.$router.push('/login')
+      this.$router.push("/login");
     },
     // 跳转到注册
     register() {
-      this.$router.push('/register')
+      this.$router.push("/register");
     }
   }
 };

@@ -59,12 +59,12 @@ export default {
           },
           {
             id: '00010106',
-            pic_url: 'images/ic_pic.png',
+            pic_url: 'images/ic_aboutus_yx.png',
             desc: '邮件'
           },
           {
             id: '00010107',
-            pic_url: 'images/ic_cp_dx.png',
+            pic_url: 'images/ic_ecp_wy.png',
             desc: '网页客服'
           },
           {
