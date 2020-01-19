@@ -1,8 +1,8 @@
 <template>
   <div class="gateway">
-    <img :src="banner_url" class="gateway_img" />
-    <advantage :dataSource="dataSource"></advantage>
-    <access :stage="accessProgress"></access>
+    <img :src="data.bannerInfo.cover_url" class="gateway_img" />
+    <advantage :dataSource="data.platformAdvantageInfo"></advantage>
+    <access :dataSource="data.accessProgressInfo"></access>
   </div>
 </template>
 
@@ -13,6 +13,15 @@ export default {
   components: {
     Advantage,
     Access
+  },
+  // 调取数据
+  asyncData(context) {
+    return context.$axios.get("gateway/info").then(res => {
+      console.log('res', res)
+      return {
+        data: res.data
+      }
+    });
   },
   data() {
     return {

@@ -1,12 +1,12 @@
 <template>
   <div class="set">
-    <div class="title">{{ meal.title }}</div>
-    <div class="desc">{{ meal.desc }}</div>
+    <div class="title">{{ dataSource.title }}</div>
+    <div class="desc">{{ dataSource.desc }}</div>
     <ul class="set_listBox">
-      <li v-for="item in meal.mealList" :key="item.id">
-        <div class="list_title">{{ item.title }}</div>
-        <div class="set_limit">{{ item.limit }}</div>
-        <div class="price">{{ item.price }}</div>
+      <li v-for="item in dataSource.list" :key="item.id">
+        <div class="list_title">{{ item.list_title }}</div>
+        <div class="set_limit">{{ item.list_limit }}</div>
+        <div class="price">{{ item.list_price }}</div>
         <el-button plain>立即购买</el-button>
       </li>
     </ul>
@@ -15,36 +15,9 @@
 
 <script>
 export default {
-  props: ['meal'],
+  props: ['dataSource'],
   data() {
-    return {
-      mealList: [
-        {
-          id: "00000010",
-          title: "套餐A1",
-          limit: "无限制",
-          price: "单价¥0.06/条"
-        },
-        {
-          id: "00000011",
-          title: "套餐B1",
-          limit: "¥3000",
-          price: "单价¥0.055/条"
-        },
-        {
-          id: "00000012",
-          title: "套餐C1",
-          limit: "¥5000",
-          price: "单价¥0.05/条"
-        },
-        {
-          id: "00000013",
-          title: "套餐D1",
-          limit: "¥10000",
-          price: "单价¥0.45/条"
-        }
-      ]
-    };
+    return {};
   }
 };
 </script>

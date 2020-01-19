@@ -1,7 +1,7 @@
 <template>
   <div class="solution">
-    <img :src="bannerUrl" class="box_img" />
-    <case></case>
+    <img :src="data.bannerInfo.cover_url" class="box_img" />
+    <case :dataSource="data"></case>
   </div>
 </template>
 
@@ -11,10 +11,17 @@ export default {
   components: {
     Case
   },
+  // 调取数据
+  asyncData(context) {
+    return context.$axios.get("solution-case/info").then(res => {
+      console.log('res', res)
+      return {
+        data: res.data
+      }
+    });
+  },
   data() {
-    return {
-      bannerUrl: "images/pic_jjfa_banner.png",
-    };
+    return {};
   },
 };
 </script>

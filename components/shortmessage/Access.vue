@@ -1,9 +1,9 @@
 <template>
   <div class="access">
-    <div class="title">{{ stage.title }}</div>
-    <div class="desc">{{ stage.desc }}</div>
+    <div class="title">{{ dataSource.title }}</div>
+    <div class="desc">{{ dataSource.desc }}</div>
     <ul class="access_box">
-      <li v-for="item in stage.stageList" :key="item.id">
+      <li v-for="item in dataSource.list" :key="item.id">
         <span class="img">{{ item.stageNum }}</span>
         <span class="text">{{ item.stageName }}</span>
       </li>
@@ -13,7 +13,7 @@
 
 <script>
 export default {
-  props: ['stage'],
+  props: ['dataSource'],
   data() {
     return {
     };

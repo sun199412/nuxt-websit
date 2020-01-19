@@ -1,23 +1,18 @@
 <template>
   <div class="programme">
-    <div class="title">方案架构</div>
-    <div class="desc">让技术为我们代言</div>
+    <div class="title">{{ dataSource.title }}</div>
+    <div class="desc">{{ dataSource.desc }}</div>
     <div class="programme_box">
       <div class="pic">
-        <div class="pic_title">框架架构图</div>
-        <img :src="frame_url" />
+        <div class="pic_title">{{ dataSource.flame_pic_title }}</div>
+        <img :src="dataSource.flame_url" />
       </div>
       <div class="into">
-        <div class="into_title">框架架构说明</div>
+        <div class="into_title">{{ dataSource.flame_desc_title }}</div>
         <div class="listBox">
-          <div class="listBox_title">架构优势</div>
+          <div class="listBox_title">{{ dataSource.flame_desc }}</div>
           <ul>
-            <li><span>为用户开通独立虚拟主机，专属数据库、专属存储、专有云呼叫中心服务。</span></li>
-            <li><span>支持云客服、云电销、全能云等方式，满足用户在呼叫中心上面多种需求。</span></li>
-            <li><span>通过物理服务器集群及负载均衡量方式，支持超大容量坐席及通话并发。</span></li>
-            <li><span>提供丰富API/SDK接口，与第三方业务系统无缝集成。</span></li>
-            <li><span>支持CRW，工作流完全自定义配置，支持二次定制开发。</span></li>
-            <li><span>提供全国区域固定号码落地及国际线路落地。</span></li>
+            <li v-for="item in dataSource.list" :key="item.id"><span>{{ item.val }}</span></li>
           </ul>
         </div>
       </div>
@@ -27,6 +22,7 @@
 
 <script>
 export default {
+  props: ['dataSource'],
   data() {
     return {
       frame_url: "images/pic_ecp_fnjg.png"

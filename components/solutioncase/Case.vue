@@ -3,15 +3,15 @@
     <div class="title">行业案例</div>
     <div class="tabBox">
       <tab 
-        :list="tabList" 
+        :list="dataSource.tabList" 
         :activeStatus="active" 
         :hideStatus="hide" 
-        :url="next_url"
+        :url="dataSource.next_url"
         @toggleTab="renderTab"
       ></tab>
       <ul
         class="tabPane"
-        v-show="record.val ? record.val === '教育' : tabList[0].val ==='教育'"
+        v-show="record.val ? record.val === '教育' : dataSource.tabList[0].val ==='教育'"
       >
         <li v-for="item in tabPaneList" :key="item.id" class="tabPane_list">
           <img class="logo" :src="item.logo_url" />
@@ -41,6 +41,7 @@
 <script>
 import Tab from "~/components/solutioncase/Tab";
 export default {
+  props: ['dataSource'],
   components: {
     Tab
   },
@@ -119,11 +120,11 @@ export default {
   methods: {
     renderTab(item) {
       this.record = item;
-      this.tabList.forEach((it, index) => {
+      this.dataSource.tabList.forEach((it, index) => {
         if (it.id === item.id) {
-          this.$set(this.tabList[index], "showFlag", "1");
+          this.$set(this.dataSource.tabList[index], "showFlag", "1");
         } else {
-          this.$set(this.tabList[index], "showFlag", "2");
+          this.$set(this.dataSource.tabList[index], "showFlag", "2");
         }
       });
     }

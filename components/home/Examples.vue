@@ -1,51 +1,38 @@
 <template>
+<div>
   <div class="example">
     <el-carousel :interval="5000" arrow="always" height="700px">
-      <el-carousel-item>
+      <el-carousel-item v-for="item in dataSource.list" :key="item.id">
         <div class="exampleItem">
-          <img :src="exampleImg1" />
-          <div class="title">客户案列</div>
-          <div class="description">Customer case</div>
+          <img :src="dataSource.bg_url" />
+          <div class="title">{{ dataSource.title }}</div>
+          <div class="description">{{ dataSource.desc }}</div>
           <div class="example_content">
-            <img :src="exampleItemImg" />
+            <img :src="item.cover_url" />
             <img :src="exampleImg1Logo" class="exampleImg1Logo" />
             <div class="example_content_text">
-              <div class="example_content_text_title">果琳用户群发短信</div>
-              <div>大家都知道每个短信平台的业务内容是差不多的，唯一不同的是提供的服务质量和发送的效果。美唐云短信平台</div>
-              <div>Everyone knows that the business content of each SMS platform is the same, the only difference is the quality of service provided and the delivery effect. Meitangyun SMS platform</div>
+              <div class="example_content_text_title">{{ item.title }}</div>
+              <div>{{ item.desc }}</div>
+              <div>{{ item.eng }}</div>
             </div>
           </div>
         </div>
       </el-carousel-item>
-      <el-carousel-item>
-        <div class="exampleItem">
-          <img :src="exampleImg1" />
-          <div class="title">客户案列</div>
-          <div class="description">Customer case</div>
-          <div class="example_content">
-            <img :src="exampleItemImg" />
-            <img :src="exampleImg1Logo" class="exampleImg1Logo" />
-            <div class="example_content_text">
-              <div class="example_content_text_title">果琳用户群发短信</div>
-              <div>大家都知道每个短信平台的业务内容是差不多的，唯一不同的是提供的服务质量和发送的效果。美唐云短信平台</div>
-              <div>Everyone knows that the business content of each SMS platform is the same, the only difference is the quality of service provided and the delivery effect. Meitangyun SMS platform</div>
-            </div>
-          </div>
-        </div>
-      </el-carousel-item>
-      <!-- <el-carousel-item v-for="item in 4" :key="item">
-        {{item}}
-      </el-carousel-item>-->
     </el-carousel>
   </div>
+  <sponsor :dataSource="dataSource.sponsorList"></sponsor>
+</div>
 </template>
 
 <script>
+import Sponsor from "~/components/home/Sponsor";
 export default {
+  props: ['dataSource'],
+  components:{
+    Sponsor
+  },
   data() {
     return {
-      exampleImg1: "images/pic_al_bg.png",
-      exampleItemImg: "images/ic_al_logo.png",
       exampleImg1Logo: "images/ic_al_yh.png"
     };
   }

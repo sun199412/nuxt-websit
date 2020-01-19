@@ -1,11 +1,11 @@
 <template>
   <div class="introduce">
-    <div class="title">{{ intro.title }}</div>
-    <div class="desc">{{ intro.desc }}</div>
+    <div class="title">{{ dataSource.title }}</div>
+    <div class="desc">{{ dataSource.desc }}</div>
     <ul class="introduce_list">
-      <li v-for="item in intro.introduceList" :key="item.id">
-        <img :src="item.pic_url" />
-        <div>{{ item.desc }}</div>
+      <li v-for="item in dataSource.list" :key="item.id">
+        <img :src="item.cover_url" />
+        <div>{{ item.list_title }}</div>
       </li>
     </ul>
   </div>
@@ -13,7 +13,7 @@
 
 <script>
 export default {
-  props: ['intro'],
+  props: ['dataSource'],
   data() {
     return {
       

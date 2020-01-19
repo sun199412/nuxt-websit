@@ -1,12 +1,12 @@
 <template>
   <div class="advantage">
     <div class="title">{{ dataSource.title }}</div>
-    <div class="desc">{{ dataSource.desic }}</div>
+    <div class="desc">{{ dataSource.desc }}</div>
     <ul class="picBox">
-      <li v-for="item in dataSource.listData" :key="item.id">
-        <img :src="item.pic_url" />
-        <div class="picBox_title">{{ item.title }}</div>
-        <div class="picBox_desc">{{ item.detail }}</div>
+      <li v-for="item in dataSource.list" :key="item.id">
+        <img :src="item.cover_url" />
+        <div class="picBox_title">{{ item.list_title }}</div>
+        <div class="picBox_desc">{{ item.list_desc }}</div>
       </li>
     </ul>
   </div>

@@ -28,7 +28,7 @@ export default {
   /*
   ** Customize the progress-bar color
   */
-  loading: { color: '#fff' },
+  loading: '~/components/loading.vue',
   /*
   ** Global CSS
   */
@@ -43,7 +43,8 @@ export default {
   */
   plugins: [
     { src: '@/plugins/element-ui' },
-    { src: '~/plugins/vue-awesome-swiper.js', ssr: false }
+    { src: '~/plugins/vue-awesome-swiper.js', ssr: false },
+    { src: "~plugins/axios.js", ssr: true },
   ],
   /*
   ** Nuxt.js dev-modules
@@ -53,8 +54,14 @@ export default {
   /*
   ** Nuxt.js modules
   */
-  modules: [
-  ],
+  modules: ["@nuxtjs/axios", "@nuxtjs/proxy"],
+  proxy: {
+    //开启代理
+    "/api": {
+      target: "https://www.fastmock.site/mock/5ae8a35418a53e4a0a524d3c31810603",
+      pathRewrite: { "^/api/": "/" }
+    }
+  },
   /*
   ** Build configuration
   */

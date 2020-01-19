@@ -1,65 +1,56 @@
 <template>
   <div class="solutions">
-    <div class="title">专业的解决方案</div>
-    <div class="description">Professional solutions</div>
+    <div class="title">{{ dataSource.title }}</div>
+    <div class="description">{{ dataSource.desc }}</div>
     <div class="tabBox">
       <el-tabs v-model="activeName" @tab-click="handleClick">
-        <el-tab-pane label="互联网企业" name="1" class="tabItem"></el-tab-pane>
-        <el-tab-pane label="电商行业" name="2"></el-tab-pane>
-        <el-tab-pane label="教育行业" name="3"></el-tab-pane>
-        <el-tab-pane label="物流行业" name="4"></el-tab-pane>
-        <el-tab-pane label="金融行业" name="5"></el-tab-pane>
-        <el-tab-pane label="餐饮行业" name="6"></el-tab-pane>
+        <el-tab-pane
+          class="tabItem"
+          v-for="item in dataSource.tab_pane_list"
+          :key="item.id"
+          :label="item.title"
+          :name="item.title"
+        >
+          <div class="tabPane">
+            <div class="tabPaneLft">
+              <div class="tabPaneLftItem" v-for="it in item.left_list" :key="it.id">
+                <div class="tabPaneLftItemText">{{ it.desc }}</div>
+                <div class="triangle"></div>
+              </div>
+            </div>
+            <img :src="solutionsImg" class="tabPanePic" />
+            <div class="tabPaneLft">
+              <div class="tabPaneLftItem" v-for="it in item.right_list" :key="it.id">
+                <div class="tabPaneLftItemText">{{ it.desc }}</div>
+                <div class="triangle2"></div>
+              </div>
+            </div>
+          </div>
+        </el-tab-pane>
       </el-tabs>
-      <div v-if="activeName==='1'" class="tabPane">
-        <div class="tabPaneLft">
-          <div class="tabPaneLftItem isfirst">
-            <div class="tabPaneLftItemText">【xx网约车】尊敬的用户您好，为了更好的为您提供服务，您可关注绑定我司的微信公众号：XXXXX详情查询，退订回复TD。</div>
-            <div class="triangle"></div>
-          </div>
-          <div class="tabPaneLftItem">
-            <div class="tabPaneLftItemText">【xx网约车】尊敬的用户您好，为了更好的为您提供服务，您可关注绑定我司的微信公众号：XXXXX详情查询，退订回复TD。</div>
-            <div class="triangle"></div>
-          </div>
-        </div>
-        <img :src="solutionsImg" class="tabPanePic"/>
-        <div class="tabPaneLft">
-          <div class="tabPaneLftItem isfirst">
-            <div class="tabPaneLftItemText">【xx娱乐】尊敬的用户您好，您手机尾号[XXXX]的申请已通过审批，请登录APP确认</div>
-            <div class="triangle2"></div>
-          </div>
-          <div class="tabPaneLftItem">
-            <div class="tabPaneLftItemText">【xx娱乐】尊敬的用户您好，您手机尾号[XXXX]的申请已通过审批，请登录APP确认</div>
-            <div class="triangle2"></div>
-          </div>
-          <div class="tabPaneLftItem">
-            <div class="tabPaneLftItemText">【xx娱乐】尊敬的用户您好，您手机尾号[XXXX]的申请已通过审批，请登录APP确认</div>
-            <div class="triangle2"></div>
-          </div>
-        </div>
-      </div>
     </div>
   </div>
 </template>
 
 <script>
-  export default {
-    data() {
-      return {
-        activeName: '1',
-        solutionsImg: 'images/pic_jjfa.png'
-      }
-    },
-    methods: {
-      handleClick(tab, event) {
-        console.log(tab, event);
-      }
+export default {
+  props: ["dataSource"],
+  data() {
+    return {
+      activeName: this.dataSource.tab_pane_list[0].title,
+      solutionsImg: "images/pic_jjfa.png"
+    };
+  },
+  methods: {
+    handleClick(tab, event) {
+      this.activeName = tab.name;
     }
   }
+};
 </script>
 
 <style lang="scss">
-$activeColor: #FC6B00;
+$activeColor: #fc6b00;
 .el-tabs__item {
   font-size: 18px;
   padding: 0 72px;
@@ -76,7 +67,7 @@ $activeColor: #FC6B00;
 </style>
 
 <style lang="scss" scoped>
-$titleColor: #1C1E2B;
+$titleColor: #1c1e2b;
 .solutions {
   width: 100%;
   height: 1000px;
@@ -130,6 +121,9 @@ $titleColor: #1C1E2B;
             border-color: transparent #fff transparent transparent;
             left: -28px;
           }
+        }
+        .tabPaneLftItem:first-child {
+          margin-top: 0;
         }
         .isfirst {
           margin-top: 0;

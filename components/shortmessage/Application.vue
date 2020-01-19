@@ -1,22 +1,22 @@
 <template>
   <div class="application">
-    <div class="title">{{ appSource.title }}</div>
-    <div class="desc">{{ appSource.desc }}</div>
+    <div class="title">{{ dataSource.title }}</div>
+    <div class="desc">{{ dataSource.desc }}</div>
     <div class="application_content">
       <ul class="left">
-        <li v-for="item in appSource.appLeftList" :key="item.id">
-          <div class="left_title">{{ item.title }}</div>
-          <div class="left_desc">{{ item.desc }}</div>
+        <li v-for="item in dataSource.appLeftList" :key="item.id">
+          <div class="left_title">{{ item.list_title }}</div>
+          <div class="left_desc">{{ item.list_desc }}</div>
         </li>
       </ul>
       <div class="picBox">
-        <img :src="appSource.backPicUrl" />
-        <div>{{ record.detail }}</div>
+        <img :src="dataSource.bg_url" />
+        <div>{{ record.list_detail }}</div>
       </div>
       <ul class="right">
-        <li v-for="item in appSource.appRightList" :key="item.id">
-          <div class="left_title">{{ item.title }}</div>
-          <div class="left_desc">{{ item.desc }}</div>
+        <li v-for="item in dataSource.appRightList" :key="item.id">
+          <div class="left_title">{{ item.list_title }}</div>
+          <div class="left_desc">{{ item.list_desc }}</div>
         </li>
       </ul>
     </div>
@@ -25,10 +25,10 @@
 
 <script>
 export default {
-  props: ['appSource'],
+  props: ['dataSource'],
   data() {
     return {
-      record: this.appSource.appLeftList[0]
+      record: this.dataSource.appLeftList[0]
     };
   },
 };

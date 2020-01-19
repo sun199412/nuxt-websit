@@ -141,7 +141,7 @@ $activeColor: #fc6b00;
     .shortBg {
       width: 550px;
       height: 607px;
-      background: url("/images/pic_zxty_dx.png") center no-repeat;
+      background: url("https://gitee.com/dujiang1992/web/raw/master/images/pic_zxty_dx.png") center no-repeat;
       .title {
         font-size: 28px;
         color: $titleColor;
@@ -192,7 +192,7 @@ $activeColor: #fc6b00;
       }
     }
     .shortBg_right {
-      background: url('/images/pic_zxty_yy.png') center no-repeat;
+      background: url('https://gitee.com/dujiang1992/web/raw/master/images/pic_zxty_yy.png') center no-repeat;
     }
   }
 }

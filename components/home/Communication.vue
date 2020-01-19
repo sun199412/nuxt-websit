@@ -1,37 +1,12 @@
 <template>
   <div class="communicationBox">
-    <div class="title">为您提供通讯的一切</div>
-    <div class="description">To provide you with all the communication</div>
+    <div class="title">{{ dataSource.title }}</div>
+    <div class="description">{{ dataSource.desc }}</div>
     <ul class="listBox">
-      <li>
-        <img :src="message" />
-        <div class="listBox_title">短信</div>
-        <div class="listBox_description">直连通道，三网合一，5秒必达。主备通道.大容量高并发.自助平台</div>
-      </li>
-      <li>
-        <img :src="audio" />
-        <div class="listBox_title">语音</div>
-        <div class="listBox_description">直连通道，三网合一，5秒必达。主备通道.大容量高并发.自助平台</div>
-      </li>
-      <li>
-        <img :src="msgPlatform" />
-        <div class="listBox_title">企业级短信平台</div>
-        <div class="listBox_description">美唐自助研发核心产品，saas架构，迭代进化，满足多应用场景</div>
-      </li>
-      <li>
-        <img :src="phonePlatform" />
-        <div class="listBox_title">企业级呼叫平台</div>
-        <div class="listBox_description">美唐自助研发核心产品，saas架构，迭代进化，满足多应用场</div>
-      </li>
-      <li>
-        <img :src="wechatPlatform" />
-        <div class="listBox_title">微信管理平台</div>
-        <div class="listBox_description">直连通道，三网合一，5秒必达。主备通道.大容量高并发.自助平台</div>
-      </li>
-      <li>
-        <img :src="morePlatform" />
-        <div class="listBox_title">多渠道信息平台</div>
-        <div class="listBox_description">整合客户已有的”沟通”服务平台，合理方案规划与建设</div>
+      <li v-for="item in dataSource.rows" :key="item.id">
+        <img :src="item.cover_url" />
+        <div class="listBox_title">{{ item.list_title }}</div>
+        <div class="listBox_description">{{ item.list_desc }}</div>
       </li>
     </ul>
   </div>
@@ -39,15 +14,9 @@
 
 <script>
   export default {
+    props: ['dataSource'],
     data() {
-      return {
-        message: "images/ic_cp_dx.png", // 短信
-        audio: "images/ic_cp_yy.png", // 语音
-        msgPlatform: 'images/ic_cp_dxpt.png', // 企业级短信平台
-        phonePlatform: 'images/ic_cp_hjpt.png', // 企业级呼叫平台
-        wechatPlatform: 'images/ic_cp_glpt.png', // 微信管理平台
-        morePlatform: 'images/ic_cp_xxpt.png', // 多渠道信息平台
-      }
+      return {}
     },
   }
 </script>

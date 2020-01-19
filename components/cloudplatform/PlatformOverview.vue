@@ -1,44 +1,20 @@
 <template>
   <div class="overview">
-    <div class="title">平台概述</div>
-    <div class="desc">美唐自助研发核心产品，saas架构，迭代进化，满足多应用场景</div>
+    <div class="title">{{ dataSource.title }}</div>
+    <div class="desc">{{ dataSource.desic }}</div>
     <div class="viewBox">
       <ul class="left">
-        <li>
-          <div class="number">1</div>
-          <div class="left_desc">账户安全登录</div>
-        </li>
-        <li>
-          <div class="number">2</div>
-          <div class="left_desc">在线客服支持</div>
-        </li>
-        <li>
-          <div class="number">3</div>
-          <div class="left_desc">在线充值</div>
-        </li>
-        <li>
-          <div class="number">4</div>
-          <div class="left_desc">常见问题</div>
+        <li v-for="item in dataSource.left_list" :key="item.id">
+          <div class="number">{{ item.stage }}</div>
+          <div class="left_desc">{{ item.name }}</div>
         </li>
       </ul>
-      <img :src="platform_url" />
+      <img :src="dataSource.bg_url" />
 
       <ul class="right">
-        <li>
-          <div class="number">5</div>
-          <div class="left_desc">通讯录管理</div>
-        </li>
-        <li>
-          <div class="number">6</div>
-          <div class="left_desc">统计报表</div>
-        </li>
-        <li>
-          <div class="number">7</div>
-          <div class="left_desc">接入手册</div>
-        </li>
-        <li>
-          <div class="number">8</div>
-          <div class="left_desc">代理商入口</div>
+        <li v-for="item in dataSource.right_list" :key="item.id">
+          <div class="number">{{ item.stage }}</div>
+          <div class="left_desc">{{ item.name }}</div>
         </li>
       </ul>
     </div>
@@ -47,10 +23,9 @@
 
 <script>
 export default {
+  props: ['dataSource'],
   data() {
-    return {
-      platform_url: "images/pic_mtypt_ptgs.png"
-    };
+    return {};
   }
 };
 </script>
