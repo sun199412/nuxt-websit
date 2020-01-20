@@ -2,14 +2,33 @@
   <div class="contentBox">
     <div class="title">行业案例</div>
     <div class="tabBox">
-      <tab 
+      <el-tabs tab-position="left">
+        <el-tab-pane v-for="item in dataSource.tabList" :key="item.id" :label="item.val">
+          <ul class="tabPane">
+            <li v-for="it in item.list" :key="it.id" class="tabPane_list">
+              <img class="logo" :src="it.logo_url" />
+              <div class="content">
+                <div class="tabPane_title">{{ it.title }}</div>
+                <div class="tabPane_text">{{ it.detail }}</div>
+                <ul>
+                  <li v-for="i in it.iconList" :key="i.id">
+                    <img class="icon" :src="i.icon" />
+                    <span class="icon_text">{{ i.val }}</span>
+                  </li>
+                </ul>
+              </div>
+            </li>
+          </ul>
+        </el-tab-pane>
+      </el-tabs>
+      <!-- <tab 
         :list="dataSource.tabList" 
         :activeStatus="active" 
         :hideStatus="hide" 
         :url="dataSource.next_url"
         @toggleTab="renderTab"
-      ></tab>
-      <ul
+      ></tab>-->
+      <!-- <ul
         class="tabPane"
         v-show="record.val ? record.val === '教育' : dataSource.tabList[0].val ==='教育'"
       >
@@ -33,7 +52,7 @@
       <div v-show="record.val==='政企服务'">政企服务</div>
       <div v-show="record.val==='交通'">交通</div>
       <div v-show="record.val==='医疗'">医疗</div>
-      <div v-show="record.val==='社交'">社交</div>
+      <div v-show="record.val==='社交'">社交</div>-->
     </div>
   </div>
 </template>
@@ -41,7 +60,7 @@
 <script>
 import Tab from "~/components/solutioncase/Tab";
 export default {
-  props: ['dataSource'],
+  props: ["dataSource"],
   components: {
     Tab
   },
@@ -153,11 +172,11 @@ $activeColor: #fc6b00;
       position: relative;
       .tabPane_list {
         margin-bottom: 58px;
+        display: flex;
+        align-items: center;
         .logo {
           margin-right: 29px;
           display: inline-block;
-          position: relative;
-          top: -72px;
         }
         .content {
           width: 694px;
@@ -195,5 +214,9 @@ $activeColor: #fc6b00;
       }
     }
   }
+}
+
+/deep/ .el-tabs__item {
+  padding: 0 36px;
 }
 </style>
